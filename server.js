@@ -14,25 +14,38 @@ app.use(express.urlencoded({extended: true}));
 app.set("views", "views");
 app.set("view engine", "ejs");
 
+
+
 // 4: Routing code
-app.get("/hello", function(req, res) {
-    res.end(`<div style="
 
-    display: flex;
-    justify-content: center;
-    background: aqua;
-    color: red;
-    padding: 100px;
+// app.get("/hello", function(req, res) {
+//     res.end(`<div style="
 
-    "><h2>HELLO WORLD </h2></div>`);
-});
+//     display: flex;
+//     justify-content: center;
+//     background: aqua;
+//     color: red;
+//     padding: 100px;
 
-app.get("/gift", function(req, res) {
-    res.end(`<h1>Siz sovg'alar sahifasidasiz.`);
+//     "><h2>HELLO WORLD </h2></div>`);
+// });
+
+// app.get("/gift", function(req, res) {
+//     res.end(`<h1>Siz sovg'alar sahifasidasiz.`);
+// });
+
+app.post("/create-item", (req, res) => {
+    console.log(req.body);
+    // console.log(req);
+    res.json({ test: "success" });
+})
+
+app.get("/", function (req, resizeBy) {
+    resizeBy.render("harid");
 });
 
 const server = http.createServer(app);
 let PORT = 3000;
-server.listen(PORT, function() {
+server.listen(PORT, function() { 
     console.log(`The server is running successfully on port: ${PORT}`);
 });
