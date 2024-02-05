@@ -1,0 +1,18 @@
+{"name": "Simon",
+"profession": "Software Engineer",
+"age": "24",
+"residence": "S.Korea",
+"adress": "S.Korea, Gyeongsan",
+"languages": ["Uzbek", "Korean", "English"],
+"Skills": ["HTML", "Css", "Js", "NodeJS", "React"],
+"extra_skills": ["Bootstrap, Materialize"],
+"work_place": "IT Company",
+"service_desc": "I am a versatile and experienced professional offering a wide range of IT services. With a strong foundation in web and mobile development, I specialize in creating innovative solutions tailored to meet your specific needs. My expertise includes backend development, database management, and ensuring robust security measures for web applications. I am dedicated to delivering high-quality, efficient, and scalable solutions that contribute to the success of your projects. Let's collaborate to bring your ideas to life and achieve your goals in the digital landscape.",
+"city": "Fergana",
+"title": ["Flower", "Seedlings", "Gardner", "old", "New"],
+"flower_desc": ["What is a Flower?", "What is a Seedling?", "Who is Gardner?"],
+"flower_name": ["Tulip", "Daffodil", "Poppy", "Sunflower", "Bluebell", "Rose", "Snowdrop", "Cherry", "Blossom"],
+"flower_price": ["15$", "25$","12$", "20$", "35$", "30$", "22$", "19$", "9$" ],
+"famous_words": ["Word is Beautiful with Flowers"],
+"famous_name": ["Simon"]
+}
