@@ -1,6 +1,6 @@
 console.log("Web Serverni boshlash");
 const express = require("express");
-const res = require("express/lib/response")
+// const res = require("express/lib/response")
 const app = express(); 
 const http = require("http");
 const fs = require("fs");
@@ -60,7 +60,7 @@ app.get("/", function (req, resizeBy) {
 });
 
 const server = http.createServer(app);
-let PORT = 3005; 
+let PORT = 3001; 
 server.listen(PORT, function() { 
     console.log(`The server is running successfully on port: ${PORT}`);
 });
