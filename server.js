@@ -47,16 +47,16 @@ app.set("view engine", "ejs");
 
 app.post("/create-item", (req, res) => {
     // console.log(req.body);
-    // console.log(req);
-    // res.json({ test: "success" });
+    console.log(req);
+    res.json({ test: "success" });
 });  
 
 app.get("/author", (req, res) => {
     res.render("author", {user: user});
 });
 
-app.get("/", function (req, resizeBy) {
-    resizeBy.render("harid");
+app.get("/", function (req, res) {
+    res.render("harid");
 });
 
 const server = http.createServer(app);
