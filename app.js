@@ -3,7 +3,7 @@ const express = require("express");
 // const res = require("express/lib/response")
 const app = express(); 
 const fs = require("fs");
- 
+const mongodb = require("mongodb");
 
 // MongoDB connect(ulash)
 const db = require("./server").db();
@@ -32,42 +32,35 @@ app.set("view engine", "ejs");
 
 // 4: Routing code
 
-// app.get("/hello", function(req, res) {
-//     res.end(`<div style="
-
-//     display: flex;
-//     justify-content: center;
-//     background: aqua;
-//     color: red;
-//     padding: 100px;
-
-//     "><h2>HELLO WORLD </h2></div>`);
-// });
-
-// app.get("/gift", function(req, res) {
-//     res.end(`<h1>Siz sovg'alar sahifasidasiz.`);
-// });
-
 app.post("/create-item", (req, res) => {
     // console.log(req.body);
     console.log("user entered /create-item");
     const new_reja = req.body.reja;
     db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-        if(err) {
-            console.log(err);
-            res.end("something went wrong");
-        } else {
-            res.end("succeesfully added");
-        }
+        console.log(data.ops)
+        res.json(data.ops[0]);
     });
-    // res.end("succees");
-    // console.log(req);
-    // res.json({ test: "success" });
 });  
+
+
 
 app.get("/author", (req, res) => {
     res.render("author", {user: user});
 });
+
+
+app.post("/delete-item", (req, res) => {
+    const id = req.body.id;
+    db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id)}, 
+    function(err, data) {
+        res.json({state: "success"});
+    });
+    // console.log(id);
+    // res.end("done");
+
+});
+
+
 
 app.get("/", function (req, res) {
     console.log("user entered /");
@@ -78,10 +71,10 @@ app.get("/", function (req, res) {
             console.log(err);
             res.end("something went wrong");
         } else {
-            console.log(data);
+            // console.log(data);
             res.render("reja", { items: data });
         }
     })
 });
 
-module.exports = app;
+module.exports = app;             

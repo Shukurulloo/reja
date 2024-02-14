@@ -123,22 +123,72 @@
 
 // B-TASK
 
-function raqamniAniqlsh(str) {
-    let count = 0;
+// function raqamniAniqlsh(str) {
+//     let count = 0;
   
-    for (let r of str) {
-      if (r >= "0" && r <= "9") {
-        count++;
-      }
-    }
-    return count;
-  }
+//     for (let r of str) {
+//       if (r >= "0" && r <= "9") {
+//         count++;
+//       }
+//     }
+//     return count;
+//   }
   
-  console.log(raqamniAniqlsh("6s5sc 43dfs4dd841v23#"));
+//   console.log(raqamniAniqlsh("6s5sc 43dfs4dd841v23#"));
 
 
   // CHALLENG TASKlar
-const animal_list = ["fox", "ant","bird", "lion", "deer", "bear", "frog", "hen", "mole", "duck", "goat", "dog",
- "cat", "bat", "cock", "cow"];
 
-// function findAnimals(txt)
+  
+// C-TASK
+const moment = require('moment');
+
+class Shop {
+  constructor(non, sharbat, chicken){
+    this.non = non;
+    this.sharbat = sharbat;
+    this.chicken = chicken;
+  }
+
+  qoldiq() {
+    const time = moment().format("YYYY-MM-DD HH:mm");
+    console.log(`Hozir ${time}da ${this.non}ta non, ${this.sharbat}ta sharbat va ${this.chicken}ta chicken bor.`);    
+  }
+
+  sotish(mahsulot, miqdor){
+    const time = moment().format("YYYY-MM-DD HH:mm");
+    console.log(`Hozir ${time}da ${miqdor}ta ${mahsulot} sotildi`);
+    if( mahsulot === "non"){
+      this.non -= miqdor;
+    }else if(mahsulot === "sharbat" ) {
+      this.sharbat -= miqdor;
+    }else if(mahsulot === "chicken"){
+      this.chicken -= miqdor;
+    }
+  }
+
+  qabul(mahsulot, miqdor){
+    const time = moment().format("YYYY-MM-DD HH:mm");
+    console.log(`Hozir ${time}da ${miqdor}ta ${mahsulot} qabul qilindi.`);
+    if(mahsulot ===  "non" ){
+      this.non += miqdor;
+    }else if(mahsulot === "sharbat" ) {
+      this.sharbat += miqdor;
+    }else if(mahsulot === "chicken"){
+      this.chicken += miqdor;
+    }
+  }
+}
+
+const shop = new Shop(4, 5, 2);
+shop.qoldiq();
+shop.sotish('non', 3);
+shop.qoldiq();
+shop.qabul('sharbat', 3); 
+shop.qoldiq();
+
+
+
+
+
+
