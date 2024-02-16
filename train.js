@@ -103,7 +103,27 @@
 
 
 
-// A-TASK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// A-TASK: 
+
+// Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi letterni ikkinchi parametrdagi sozdan qatnashga sonini return qilishi kerak boladi.
+// MASALAN countLetter("e", "engineer") 3ni return qiladi.
+
 // function countLetter(letter, word) { //
 //     let count = 0; 
 //     for(let i = 0; i < word.length; i++){
@@ -121,7 +141,15 @@
 
 
 
-// B-TASK
+
+
+
+
+// B-TASK: 
+
+// Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+// MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+
 
 // function raqamniAniqlsh(str) {
 //     let count = 0;
@@ -137,59 +165,94 @@
 //   console.log(raqamniAniqlsh("6s5sc 43dfs4dd841v23#"));
 
 
-  // CHALLENG TASKlar
-
   
-// C-TASK
-const moment = require('moment');
-const time = moment().format("YYYY-MM-DD HH:mm");
 
-class Shop {
-  constructor(non, sharbat, chicken){
-    this.non = non;
-    this.sharbat = sharbat;
-    this.chicken = chicken;
-  }
+/*C-TASK: 
 
-  qoldiq() {
+Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, 
+hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin.
+MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! 
+shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
+
+*/
+
+// const moment = require('moment');
+// const time = moment().format("YYYY-MM-DD HH:mm");
+
+// class Shop {
+//   constructor(non, sharbat, chicken){
+//     this.non = non;
+//     this.sharbat = sharbat;
+//     this.chicken = chicken;
+//   }
+
+//   qoldiq() {
     
-    console.log(`Hozir ${time}da ${this.non}ta non, ${this.sharbat}ta sharbat va ${this.chicken}ta chicken bor.`);    
-  }
+//     console.log(`Hozir ${time}da ${this.non}ta non, ${this.sharbat}ta sharbat va ${this.chicken}ta chicken bor.`);    
+//   }
 
-  sotish(mahsulot, miqdor){
+//   sotish(mahsulot, miqdor){
     
-    console.log(`Hozir ${time}da ${miqdor}ta ${mahsulot} sotildi`);
-    if( mahsulot === "non"){
-      this.non -= miqdor;
-    }else if(mahsulot === "sharbat" ) {
-      this.sharbat -= miqdor;
-    }else if(mahsulot === "chicken"){
-      this.chicken -= miqdor;
-    }
-  }
+//     console.log(`Hozir ${time}da ${miqdor}ta ${mahsulot} sotildi`);
+//     if( mahsulot === "non"){
+//       this.non -= miqdor;
+//     }else if(mahsulot === "sharbat" ) {
+//       this.sharbat -= miqdor;
+//     }else if(mahsulot === "chicken"){
+//       this.chicken -= miqdor;
+//     }
+//   }
 
-  qabul(mahsulot, miqdor){
+//   qabul(mahsulot, miqdor){
     
-    console.log(`Hozir ${time}da ${miqdor}ta ${mahsulot} qabul qilindi.`);
-    if(mahsulot ===  "non" ){
-      this.non += miqdor;
-    }else if(mahsulot === "sharbat" ) {
-      this.sharbat += miqdor;
-    }else if(mahsulot === "chicken"){
-      this.chicken += miqdor;
-    }
+//     console.log(`Hozir ${time}da ${miqdor}ta ${mahsulot} qabul qilindi.`);
+//     if(mahsulot ===  "non" ){
+//       this.non += miqdor;
+//     }else if(mahsulot === "sharbat" ) {
+//       this.sharbat += miqdor;
+//     }else if(mahsulot === "chicken"){
+//       this.chicken += miqdor;
+//     }
+//   }
+// }
+
+// const shop = new Shop(4, 5, 2);
+// shop.qoldiq();
+// shop.sotish('non', 3);
+// shop.qoldiq();
+// shop.qabul('sharbat', 3); 
+// shop.qoldiq();
+
+
+
+
+
+
+/* D-TASK: 
+
+Shunday function tuzing, u 2ta string parametr ega bolsin, 
+hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+*/
+
+function checkContent(a, b) {
+  const param1 = a.split('').sort();
+  const param2 = b.split('').sort();
+ 
+  for (let i = 0; i < param1.length; i++) {
+    if (param1[i] !== param2[i]) {
+      return false
+    }   
   }
-}
-
-const shop = new Shop(4, 5, 2);
-shop.qoldiq();
-shop.sotish('non', 3);
-shop.qoldiq();
-shop.qabul('sharbat', 3); 
-shop.qoldiq();
+  return true; 
+  }
+console.log("check1:", checkContent("gmtiprou", "mitgroup")); 
+console.log("check2:", checkContent("gmtiprou9", "mitgroup")); 
 
 
 
 
 
+
+  // CHALLENG TASKlar
 
