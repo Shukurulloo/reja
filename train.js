@@ -142,6 +142,7 @@
   
 // C-TASK
 const moment = require('moment');
+const time = moment().format("YYYY-MM-DD HH:mm");
 
 class Shop {
   constructor(non, sharbat, chicken){
@@ -151,12 +152,12 @@ class Shop {
   }
 
   qoldiq() {
-    const time = moment().format("YYYY-MM-DD HH:mm");
+    
     console.log(`Hozir ${time}da ${this.non}ta non, ${this.sharbat}ta sharbat va ${this.chicken}ta chicken bor.`);    
   }
 
   sotish(mahsulot, miqdor){
-    const time = moment().format("YYYY-MM-DD HH:mm");
+    
     console.log(`Hozir ${time}da ${miqdor}ta ${mahsulot} sotildi`);
     if( mahsulot === "non"){
       this.non -= miqdor;
@@ -168,7 +169,7 @@ class Shop {
   }
 
   qabul(mahsulot, miqdor){
-    const time = moment().format("YYYY-MM-DD HH:mm");
+    
     console.log(`Hozir ${time}da ${miqdor}ta ${mahsulot} qabul qilindi.`);
     if(mahsulot ===  "non" ){
       this.non += miqdor;
