@@ -250,6 +250,18 @@ MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 // console.log("check2:", checkContent("gmtiprou9", "mitgroup")); 
 
 
+/* E-TASK: 
+
+Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+MASALAN: getReverse("hello") return qilsin "olleh"
+
+*/
+
+function getReverse(soz){
+   return soz.split('').reverse().join("")
+}
+
+console.log(getReverse("Assalomu alaykum"));
 
 
 
