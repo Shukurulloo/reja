@@ -235,19 +235,19 @@ hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda fals
 MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 */
 
-function checkContent(a, b) {
-  const param1 = a.split('').sort();
-  const param2 = b.split('').sort();
+// function checkContent(a, b) {
+//   const param1 = a.split('').sort();
+//   const param2 = b.split('').sort();
  
-  for (let i = 0; i < param1.length; i++) {
-    if (param1[i] !== param2[i]) {
-      return false
-    }   
-  }
-  return true; 
-  }
-console.log("check1:", checkContent("gmtiprou", "mitgroup")); 
-console.log("check2:", checkContent("gmtiprou9", "mitgroup")); 
+//   for (let i = 0; i < param1.length; i++) {
+//     if (param1[i] !== param2[i]) {
+//       return false
+//     }   
+//   }
+//   return true; 
+//   }
+// console.log("check1:", checkContent("gmtiprou", "mitgroup")); 
+// console.log("check2:", checkContent("gmtiprou9", "mitgroup")); 
 
 
 
@@ -255,3 +255,25 @@ console.log("check2:", checkContent("gmtiprou9", "mitgroup"));
 
 
   // CHALLENG TASKlar
+
+  const animal_list = ["fox", "ant", "bird", "lion", "deer", "bear", "frog", "hen", "mole", "duck", "goat", "dog", "cat", "bat", "cock", "cow"];
+
+  function findAnimals(txt) {
+      const foundAnimals = [];
+      for (let animal of animal_list) {
+          let found = true;
+          for (let char of animal) {
+              if (!txt.includes(char)) {
+                  found = false;
+                  break;
+              }
+          }
+          if (found) {
+              foundAnimals.push(animal);
+          }
+      }
+      return foundAnimals;
+  }
+  
+  const javob = findAnimals('qoaedetfrgor' );
+  console.log("Javob:", javob);
