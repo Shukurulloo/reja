@@ -12,7 +12,7 @@
 "title": ["Flower", "Seedlings", "Gardner", "old", "New"],
 "flower_desc": ["What is a Flower?", "What is a Seedling?", "Who is Gardner?"],
 "flower_name": ["Tulip", "Daffodil", "Poppy", "Sunflower", "Bluebell", "Rose", "Snowdrop", "Cherry", "Blossom"],
-"flower_price": ["15$", "25$","12$", "20$", "35$", "30$", "22$", "19$", "9$" ],
+"flower_price": ["15$", "25$","12$", "20$", "35$", "30$", "22$", "19$", "9$", "5$" ],
 "famous_words": ["Word is Beautiful with Flowers"],
 "famous_name": ["Simon"]
 }
