@@ -250,6 +250,7 @@ MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 // console.log("check2:", checkContent("gmtiprou9", "mitgroup")); 
 
 
+
 /* E-TASK: 
 
 Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
@@ -257,35 +258,65 @@ MASALAN: getReverse("hello") return qilsin "olleh"
 
 */
 
-function getReverse(soz){
-   return soz.split('').reverse().join("")
-}
+// function getReverse(soz){
+//    return soz.split('').reverse().join("")
+// }
 
-console.log(getReverse("Assalomu alaykum"));
+// console.log(getReverse("Assalomu alaykum"));
 
+
+
+
+/*F-TASK: 
+
+Shunday findDoublers function tuzing, unga faqat bitta string argument pass bolib, agar stringda bir hil harf qatnashgan bolsa true, qatnashmasa false qaytarishi kerak.
+MASALAN: getReverse("hello") return true return qiladi
+
+*/
+
+
+function findDoublers(string) {
+    const lcString = string.toLowerCase();
+    
+    for (let i = 0; i < lcString.length; i++) {
+      if (lcString[i] >= 'a' && lcString[i] <= 'z' ) {
+        for (let check = i + 1; check < lcString.length; check++) {
+          if (lcString[i] === lcString[check]) {
+            return true;
+          }
+        }
+      }
+    }
+    return false;
+  }
+  
+  console.log(findDoublers("KATTA HARF"));
+  console.log(findDoublers("kichik harf")); 
+  console.log(findDoublers("harf")); 
+  
 
 
 
   // CHALLENG TASKlar
 
-  const animal_list = ["fox", "ant", "bird", "lion", "deer", "bear", "frog", "hen", "mole", "duck", "goat", "dog", "cat", "bat", "cock", "cow"];
+//   const animal_list = ["fox", "ant", "bird", "lion", "deer", "bear", "frog", "hen", "mole", "duck", "goat", "dog", "cat", "bat", "cock", "cow"];
 
-  function findAnimals(txt) {
-      const foundAnimals = [];
-      for (let animal of animal_list) {
-          let found = true;
-          for (let char of animal) {
-              if (!txt.includes(char)) {
-                  found = false;
-                  break;
-              }
-          }
-          if (found) {
-              foundAnimals.push(animal);
-          }
-      }
-      return foundAnimals;
-  }
+//   function findAnimals(txt) {
+//       const foundAnimals = [];
+//       for (let animal of animal_list) {
+//           let found = true;
+//           for (let char of animal) {
+//               if (!txt.includes(char)) {
+//                   found = false;
+//                   break;
+//               }
+//           }
+//           if (found) {
+//               foundAnimals.push(animal);
+//           }
+//       }
+//       return foundAnimals;
+//   }
   
-  const javob = findAnimals('qoaedetfrgor' );
-  console.log("Javob:", javob);
+//   const javob = findAnimals('qoaedetfrgor' );
+//   console.log("Javob:", javob);
